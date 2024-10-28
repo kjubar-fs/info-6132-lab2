@@ -1,7 +1,7 @@
 /*
  *  Author: Kaleb Jubar
  *  Created: 28 Oct 2024, 3:45:16 PM
- *  Last update: 28 Oct 2024, 3:55:28 PM
+ *  Last update: 28 Oct 2024, 4:16:53 PM
  *  Copyright (c) 2024 Kaleb Jubar
  */
 import { View } from "react-native";
@@ -24,6 +24,7 @@ export default function HomeScreen() {
                 screenOptions={{
                     headerShown: false,
                 }}
+                sceneContainerStyle={styles.navContainer}
             >
                 <Tab.Screen
                     name="Summary"

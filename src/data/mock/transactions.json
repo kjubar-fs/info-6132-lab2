@@ -78,5 +78,26 @@
         "name": "OLD OAK RENT AUTO-PAY",
         "sender": "Checking",
         "destination": "Old Oak Properties"
+    },
+    {
+        "value": -12.72,
+        "date": 1727456689000,
+        "name": "SUBWAY DUNDAS",
+        "sender": "Checking",
+        "destination": "Subway"
+    },
+    {
+        "value": 4.98,
+        "date": 1726347600000,
+        "name": "INTEREST",
+        "sender": "123 Bank",
+        "destination": "Checking"
+    },
+    {
+        "value": -1250,
+        "date": 1725195600000,
+        "name": "OLD OAK RENT AUTO-PAY",
+        "sender": "Checking",
+        "destination": "Old Oak Properties"
     }
 ]

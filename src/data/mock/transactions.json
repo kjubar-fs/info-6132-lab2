@@ -25,7 +25,8 @@
         "date": 1729641379000,
         "name": "SKIP ORDER",
         "sender": "Checking",
-        "destination": "Skip the Dishes"
+        "destination": "Skip the Dishes",
+        "description": "Wing Wah Asian Cuisine"
     },
     {
         "value": 1500,

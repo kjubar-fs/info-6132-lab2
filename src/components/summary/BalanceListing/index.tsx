@@ -1,11 +1,12 @@
 /*
  *  Author: Kaleb Jubar
  *  Created: 29 Oct 2024, 10:45:06 AM
- *  Last update: 29 Oct 2024, 11:44:35 AM
+ *  Last update: 29 Oct 2024, 1:32:43 PM
  *  Copyright (c) 2024 Kaleb Jubar
  */
 import { View, Text } from "react-native";
 
+import { numFormatter } from "../../../util/constants";
 import styles from "./styles";
 
 interface BalanceListingProps {
@@ -20,14 +21,6 @@ export default function BalanceListing({ balance, dayChange = 0 }: BalanceListin
     } else if (dayChange < 0) {
         dayChangeColorStyle = styles.negative;
     }
-
-    const numFormatter = Intl.NumberFormat(
-        "en-CA",
-        {
-            style: "currency",
-            currency: "CAD",
-        }
-    );
 
     return (
         <View style={styles.container}>

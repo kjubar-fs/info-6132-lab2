@@ -1,7 +1,7 @@
 /*
  *  Author: Kaleb Jubar
  *  Created: 28 Oct 2024, 3:53:18 PM
- *  Last update: 29 Oct 2024, 9:58:55 AM
+ *  Last update: 29 Oct 2024, 1:32:31 PM
  *  Copyright (c) 2024 Kaleb Jubar
  */
 import { Platform } from "react-native"
@@ -36,3 +36,11 @@ export const lightDropShadowStyle = {
     shadowRadius: 2,
     elevation: 2,
 };
+
+export const numFormatter = Intl.NumberFormat(
+    "en-CA",
+    {
+        style: "currency",
+        currency: "CAD",
+    }
+);

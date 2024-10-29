@@ -1,12 +1,13 @@
 /*
  *  Author: Kaleb Jubar
  *  Created: 28 Oct 2024, 3:53:18 PM
- *  Last update: 28 Oct 2024, 4:15:56 PM
+ *  Last update: 29 Oct 2024, 9:58:55 AM
  *  Copyright (c) 2024 Kaleb Jubar
  */
 import { Platform } from "react-native"
 
 export const primaryColor = "#2A324B";
+export const secondaryColor = "#515D82";
 export const accentColor = "#E6AF2E";
 export const white = "#FBFBFB";
 

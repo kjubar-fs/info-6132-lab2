@@ -1,7 +1,7 @@
 /*
  *  Author: Kaleb Jubar
  *  Created: 29 Oct 2024, 1:48:36 PM
- *  Last update: 29 Oct 2024, 3:05:26 PM
+ *  Last update: 29 Oct 2024, 3:41:49 PM
  *  Copyright (c) 2024 Kaleb Jubar
  */
 import { View, FlatList } from "react-native";
@@ -34,7 +34,8 @@ export default function TransactionList({ flatDisplay = false, rowLimit = 7 }: T
                 )}
                 keyExtractor={(_, ix) => ix.toString()}
                 ItemSeparatorComponent={Divider}
-                scrollEnabled={false}
+                scrollEnabled={!flatDisplay}
+                showsVerticalScrollIndicator={false}
                 style={styles.list}
             />
         </View>

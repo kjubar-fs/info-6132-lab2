@@ -1,7 +1,7 @@
 /*
  *  Author: Kaleb Jubar
  *  Created: 29 Oct 2024, 1:51:38 PM
- *  Last update: 29 Oct 2024, 1:56:43 PM
+ *  Last update: 29 Oct 2024, 2:13:00 PM
  *  Copyright (c) 2024 Kaleb Jubar
  */
 import { createContext, useContext } from "react";
@@ -15,10 +15,11 @@ interface TransactionsProviderProps {
 
 export type Transaction = {
     value: number,
-    date: Date,
+    date: number,
     name: string,
     sender: string,
-    destination: string
+    destination: string,
+    description?: string
 }
 
 export function TransactionsProvider({ children, txList }: TransactionsProviderProps) {
@@ -29,6 +30,6 @@ export function TransactionsProvider({ children, txList }: TransactionsProviderP
     );
 }
 
-export function useCredentials() {
+export function useTransactions() {
     return useContext(TransactionsContext);
 }

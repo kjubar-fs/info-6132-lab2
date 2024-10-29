@@ -1,7 +1,7 @@
 /*
  *  Author: Kaleb Jubar
  *  Created: 28 Oct 2024, 3:45:16 PM
- *  Last update: 29 Oct 2024, 10:07:47 AM
+ *  Last update: 29 Oct 2024, 3:15:26 PM
  *  Copyright (c) 2024 Kaleb Jubar
  */
 import { View } from "react-native";
@@ -14,7 +14,7 @@ import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import SummaryScreen from "../SummaryScreen";
 import TxListScreen from "../TxListScreen";
 
-import { accentColor, secondaryColor } from "../../util/constants";
+import { secondaryColor, accentColor, navScreens } from "../../util/constants";
 import styles from "./styles";
 
 const Tab = createBottomTabNavigator();
@@ -33,9 +33,10 @@ export default function HomeScreen() {
                 sceneContainerStyle={styles.navContainer}
             >
                 <Tab.Screen
-                    name="Summary"
+                    name={navScreens.summary}
                     component={SummaryScreen}
                     options={{
+                        tabBarLabel: "Summary",
                         tabBarIcon({ color, size }) {
                             return (
                                 <MaterialCommunityIcons
@@ -49,9 +50,10 @@ export default function HomeScreen() {
                 />
 
                 <Tab.Screen
-                    name="Transactions"
+                    name={navScreens.transactions}
                     component={TxListScreen}
                     options={{
+                        tabBarLabel: "Transactions",
                         tabBarIcon({ color, size }) {
                             return (
                                 <MaterialIcons

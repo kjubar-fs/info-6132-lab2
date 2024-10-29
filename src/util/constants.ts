@@ -1,11 +1,14 @@
 /*
  *  Author: Kaleb Jubar
  *  Created: 28 Oct 2024, 3:53:18 PM
- *  Last update: 29 Oct 2024, 2:29:22 PM
+ *  Last update: 29 Oct 2024, 3:14:46 PM
  *  Copyright (c) 2024 Kaleb Jubar
  */
 import { Platform } from "react-native"
 
+//////////////////////////////
+//       Global styles
+//////////////////////////////
 export const primaryColor = "#2A324B";
 export const secondaryColor = "#515D82";
 export const accentColor = "#E6AF2E";
@@ -39,6 +42,9 @@ export const lightDropShadowStyle = {
     elevation: 2,
 };
 
+//////////////////////////////
+//         Utilities
+//////////////////////////////
 export const numFormatter = Intl.NumberFormat(
     "en-CA",
     {
@@ -46,3 +52,11 @@ export const numFormatter = Intl.NumberFormat(
         currency: "CAD",
     }
 );
+
+//////////////////////////////
+//    Navigation constants
+//////////////////////////////
+export const navScreens = {
+    transactions: "txList",
+    summary: "summary",
+};

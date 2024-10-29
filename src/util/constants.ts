@@ -1,7 +1,7 @@
 /*
  *  Author: Kaleb Jubar
  *  Created: 28 Oct 2024, 3:53:18 PM
- *  Last update: 29 Oct 2024, 3:14:46 PM
+ *  Last update: 29 Oct 2024, 3:19:46 PM
  *  Copyright (c) 2024 Kaleb Jubar
  */
 import { Platform } from "react-native"
@@ -52,6 +52,10 @@ export const numFormatter = Intl.NumberFormat(
         currency: "CAD",
     }
 );
+
+export function formatDate(date: Date): string {
+    return `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear() % 100}`;
+}
 
 //////////////////////////////
 //    Navigation constants

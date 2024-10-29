@@ -1,20 +1,36 @@
 /*
  *  Author: Kaleb Jubar
  *  Created: 28 Oct 2024, 3:50:14 PM
- *  Last update: 29 Oct 2024, 3:41:09 PM
+ *  Last update: 29 Oct 2024, 4:12:31 PM
  *  Copyright (c) 2024 Kaleb Jubar
  */
-import { View, Text } from "react-native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import TransactionList from "../../components/transactions/TransactionList";
+import TxListHomeScreen from "../TxListHomeScreen";
+import TxDetailScreen from "../TxDetailScreen";
 
-import styles from "./styles";
+import { navScreens } from "../../util/constants";
+
+const Stack = createNativeStackNavigator();
 
 export default function TxListScreen() {
     return (
-        <View style={styles.container}>
-            <Text style={styles.title}>Transactions</Text>
-            <TransactionList />
-        </View>
+        <Stack.Navigator>
+            <Stack.Screen
+                name={navScreens.transactionsList}
+                component={TxListHomeScreen}
+                options={{
+                    headerShown: false,
+                }}
+            />
+
+            <Stack.Screen
+                name={navScreens.transactionDetail}
+                component={TxDetailScreen}
+                options={{
+                    headerTitle: "Transaction Details",
+                }}
+            />
+        </Stack.Navigator>
     );
 }

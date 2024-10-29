@@ -1,12 +1,13 @@
 /*
  *  Author: Kaleb Jubar
  *  Created: 28 Oct 2024, 3:50:02 PM
- *  Last update: 29 Oct 2024, 4:02:02 PM
+ *  Last update: 29 Oct 2024, 4:22:12 PM
  *  Copyright (c) 2024 Kaleb Jubar
  */
 import { Text, ScrollView, TouchableHighlight } from "react-native";
 
 import { useNavigation } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 
 import Card from "../../components/common/Card";
 import Divider from "../../components/common/Divider";
@@ -18,7 +19,7 @@ import { navScreens } from "../../util/constants";
 import styles from "./styles";
 
 export default function SummaryScreen() {
-    const nav = useNavigation();
+    const nav = useNavigation<NativeStackNavigationProp<any>>();
 
     return (
         <ScrollView contentContainerStyle={styles.container}>
@@ -35,7 +36,7 @@ export default function SummaryScreen() {
                 <TouchableHighlight
                     style={styles.button}
                     underlayColor="#F7F7F7"
-                    onPress={() => { nav?.navigate(navScreens.transactionsTab as never) }}
+                    onPress={() => { nav?.navigate(navScreens.transactionsTab) }}
                 >
                     <Text>View More</Text>
                 </TouchableHighlight>

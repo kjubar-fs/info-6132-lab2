@@ -1,0 +1,81 @@
+[
+    {
+        "value": -145.24,
+        "date": 1730225061000,
+        "name": "MOBIL GAS PUMP",
+        "sender": "Checking",
+        "destination": "Mobil Fuel Canada"
+    },
+    {
+        "value": 5624.76,
+        "date": 1729857600000,
+        "name": "PAYROLL DIRECT DEPOSIT",
+        "sender": "Employer ABC Inc.",
+        "destination": "Checking"
+    },
+    {
+        "value": -67.45,
+        "date": 1729700079000,
+        "name": "CAA AUTO INSURANCE",
+        "sender": "Checking",
+        "destination": "CAA Insurance"
+    },
+    {
+        "value": -43.21,
+        "date": 1729641379000,
+        "name": "SKIP ORDER",
+        "sender": "Checking",
+        "destination": "Skip the Dishes"
+    },
+    {
+        "value": 1500,
+        "date": 1729351357000,
+        "name": "INTERAC E-TRANSFER",
+        "sender": "Chris McMullan",
+        "destination": "Checking",
+        "description": "My part of the Airbnb rental fee, thanks for covering!"
+    },
+    {
+        "value": -1214.95,
+        "date": 1729083600000,
+        "name": "AMEX AUTO PAY",
+        "sender": "Checking",
+        "destination": "American Express"
+    },
+    {
+        "value": 5.12,
+        "date": 1728939600000,
+        "name": "INTEREST",
+        "sender": "123 Bank",
+        "destination": "Checking"
+    },
+    {
+        "value": -69.33,
+        "date": 1728783809000,
+        "name": "MORRIS RAMEN",
+        "sender": "Checking",
+        "destination": "Morris Ramen Shop"
+    },
+    {
+        "value": -32.50,
+        "date": 1728699763000,
+        "name": "UBER RIDESHARE",
+        "sender": "Checking",
+        "destination": "Uber"
+    },
+    {
+        "value": 37.82,
+        "date": 1728697438000,
+        "name": "INTERAC E-TRANSFER",
+        "sender": "Jamie Allister",
+        "destination": "Checking",
+        "description": "drinks :)"
+    },
+    {
+        "value": -1250,
+        "date": 1727787600000,
+        "name": "OLD OAK RENT AUTO-PAY",
+        "sender": "Checking",
+        "destination": "Old Oak Properties"
+    }
+]

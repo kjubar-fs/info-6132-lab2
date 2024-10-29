@@ -1,7 +1,7 @@
 /*
  *  Author: Kaleb Jubar
  *  Created: 29 Oct 2024, 12:53:27 PM
- *  Last update: 29 Oct 2024, 2:55:55 PM
+ *  Last update: 29 Oct 2024, 3:23:30 PM
  *  Copyright (c) 2024 Kaleb Jubar
  */
 import { FlatList, View } from "react-native";
@@ -18,8 +18,7 @@ interface BalanceHistoryProps {
 
 type BalanceHistoryPoint = {
     value: number,
-    month: number,
-    day: number
+    date: number
 }
 
 export default function BalanceHistory({ history, displayPoints = 5 }: BalanceHistoryProps) {
@@ -32,7 +31,7 @@ export default function BalanceHistory({ history, displayPoints = 5 }: BalanceHi
                 renderItem={({ item }) => (
                     <BalanceHistoryListItem
                         value={item.value}
-                        date={`${item.month}/${item.day}`}
+                        date={new Date(item.date)}
                     />
                 )}
                 keyExtractor={(_, ix) => ix.toString()}

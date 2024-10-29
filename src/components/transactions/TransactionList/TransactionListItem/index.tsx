@@ -1,14 +1,14 @@
 /*
  *  Author: Kaleb Jubar
  *  Created: 29 Oct 2024, 1:49:51 PM
- *  Last update: 29 Oct 2024, 2:59:54 PM
+ *  Last update: 29 Oct 2024, 3:20:38 PM
  *  Copyright (c) 2024 Kaleb Jubar
  */
 import { View, Text } from "react-native";
 
 import { Transaction } from "../../../../data/context/transactions";
 
-import { numFormatter } from "../../../../util/constants";
+import { formatDate, numFormatter } from "../../../../util/constants";
 import styles from "./styles";
 
 interface TransactionListItemProps {
@@ -30,9 +30,7 @@ export default function TransactionListItem({ transaction, flatDisplay = false }
     if (flatDisplay) {
         return flatContents;
     } else {
-        const date = new Date(transaction.date);
-        const dateStr =
-            `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear() % 100}`;
+        const date = formatDate(new Date(transaction.date));
 
         return (
             <View style={styles.container}>
@@ -46,7 +44,7 @@ export default function TransactionListItem({ transaction, flatDisplay = false }
                     </Text>
                     
                     <Text style={styles.date}>
-                        {dateStr}
+                        {date}
                     </Text>
                 </View>
             </View>

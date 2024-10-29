@@ -1,7 +1,7 @@
 /*
  *  Author: Kaleb Jubar
  *  Created: 28 Oct 2024, 3:53:18 PM
- *  Last update: 29 Oct 2024, 3:19:46 PM
+ *  Last update: 29 Oct 2024, 4:02:23 PM
  *  Copyright (c) 2024 Kaleb Jubar
  */
 import { Platform } from "react-native"
@@ -61,6 +61,9 @@ export function formatDate(date: Date): string {
 //    Navigation constants
 //////////////////////////////
 export const navScreens = {
-    transactions: "txList",
     summary: "summary",
+
+    transactionsTab: "txListTab",
+    transactionsList: "txListHome",
+    transactionDetail: "txDetail",
 };

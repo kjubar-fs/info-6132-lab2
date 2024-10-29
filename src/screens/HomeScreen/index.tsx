@@ -1,7 +1,7 @@
 /*
  *  Author: Kaleb Jubar
  *  Created: 28 Oct 2024, 3:45:16 PM
- *  Last update: 29 Oct 2024, 3:15:26 PM
+ *  Last update: 29 Oct 2024, 4:02:02 PM
  *  Copyright (c) 2024 Kaleb Jubar
  */
 import { View } from "react-native";
@@ -50,7 +50,7 @@ export default function HomeScreen() {
                 />
 
                 <Tab.Screen
-                    name={navScreens.transactions}
+                    name={navScreens.transactionsTab}
                     component={TxListScreen}
                     options={{
                         tabBarLabel: "Transactions",

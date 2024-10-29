@@ -1,7 +1,7 @@
 /*
  *  Author: Kaleb Jubar
  *  Created: 29 Oct 2024, 12:53:27 PM
- *  Last update: 29 Oct 2024, 1:40:40 PM
+ *  Last update: 29 Oct 2024, 2:55:55 PM
  *  Copyright (c) 2024 Kaleb Jubar
  */
 import { FlatList, View } from "react-native";
@@ -35,6 +35,7 @@ export default function BalanceHistory({ history, displayPoints = 5 }: BalanceHi
                         date={`${item.month}/${item.day}`}
                     />
                 )}
+                keyExtractor={(_, ix) => ix.toString()}
                 ItemSeparatorComponent={Divider}
                 scrollEnabled={false}
                 style={styles.list}

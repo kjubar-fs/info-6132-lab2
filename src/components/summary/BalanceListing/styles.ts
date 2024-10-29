@@ -1,10 +1,12 @@
 /*
  *  Author: Kaleb Jubar
  *  Created: 29 Oct 2024, 10:46:24 AM
- *  Last update: 29 Oct 2024, 11:46:29 AM
+ *  Last update: 29 Oct 2024, 2:29:35 PM
  *  Copyright (c) 2024 Kaleb Jubar
  */
 import { StyleSheet } from "react-native";
+
+import { negativeColor, positiveColor } from "../../../util/constants";
 
 export default StyleSheet.create({
     container: {
@@ -29,10 +31,10 @@ export default StyleSheet.create({
     },
 
     positive: {
-        color: "#0A0",
+        color: positiveColor,
     },
 
     negative: {
-        color: "#A00",
+        color: negativeColor,
     },
 });

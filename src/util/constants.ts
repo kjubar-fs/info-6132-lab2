@@ -1,7 +1,7 @@
 /*
  *  Author: Kaleb Jubar
  *  Created: 28 Oct 2024, 3:53:18 PM
- *  Last update: 29 Oct 2024, 4:02:23 PM
+ *  Last update: 29 Oct 2024, 7:54:56 PM
  *  Copyright (c) 2024 Kaleb Jubar
  */
 import { Platform } from "react-native"
@@ -15,6 +15,7 @@ export const accentColor = "#E6AF2E";
 export const white = "#FBFBFB";
 export const positiveColor = "#0A0";
 export const negativeColor = "#A00";
+export const highlight = "#F7F7F7";
 
 export const safeAreaPadding = Platform.OS === "ios" ? 60 : 50;
 

@@ -1,14 +1,14 @@
 /*
  *  Author: Kaleb Jubar
  *  Created: 26 Oct 1985, 4:15:00 AM
- *  Last update: 29 Oct 2024, 3:29:25 PM
+ *  Last update: 29 Oct 2024, 8:25:01 PM
  *  Copyright (c) 1985 - 2024 Kaleb Jubar
  */
 import { StyleSheet, View } from 'react-native';
 
 import { StatusBar } from 'expo-status-bar';
 
-import { NavigationContainer } from '@react-navigation/native';
+import { DefaultTheme, NavigationContainer } from '@react-navigation/native';
 
 import { TransactionsProvider } from './src/data/context/transactions';
 import transactions from "./src/data/mock/transactions.json";
@@ -17,11 +17,19 @@ import balanceHistory from "./src/data/mock/balanceHistory.json";
 
 import HomeScreen from './src/screens/HomeScreen';
 
-import { primaryColor } from './src/util/constants';
+import { primaryColor, secondaryColor } from './src/util/constants';
+
+const BankTheme = {
+    ...DefaultTheme,
+    colors: {
+        ...DefaultTheme.colors,
+        primary: secondaryColor,
+    },
+};
 
 export default function App() {
     return (
-        <NavigationContainer>
+        <NavigationContainer theme={BankTheme}>
             <TransactionsProvider txList={transactions}>
             <BalanceHistoryProvider balanceList={balanceHistory}>
 

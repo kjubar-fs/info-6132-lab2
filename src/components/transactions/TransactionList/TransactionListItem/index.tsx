@@ -1,14 +1,17 @@
 /*
  *  Author: Kaleb Jubar
  *  Created: 29 Oct 2024, 1:49:51 PM
- *  Last update: 29 Oct 2024, 3:20:38 PM
+ *  Last update: 29 Oct 2024, 7:56:03 PM
  *  Copyright (c) 2024 Kaleb Jubar
  */
-import { View, Text } from "react-native";
+import { View, Text, TouchableHighlight } from "react-native";
+
+import { useNavigation } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 
 import { Transaction } from "../../../../data/context/transactions";
 
-import { formatDate, numFormatter } from "../../../../util/constants";
+import { formatDate, highlight, navScreens, numFormatter } from "../../../../util/constants";
 import styles from "./styles";
 
 interface TransactionListItemProps {
@@ -17,6 +20,8 @@ interface TransactionListItemProps {
 }
 
 export default function TransactionListItem({ transaction, flatDisplay = false }: TransactionListItemProps) {
+    const nav = useNavigation<NativeStackNavigationProp<any>>();
+
     const flatContents = (
         <View style={styles.flatContainer}>
             <Text style={styles.name}>{transaction.name}</Text>
@@ -33,7 +38,14 @@ export default function TransactionListItem({ transaction, flatDisplay = false }
         const date = formatDate(new Date(transaction.date));
 
         return (
-            <View style={styles.container}>
+            <TouchableHighlight
+                style={styles.container}
+                onPress={() => {
+                    nav?.navigate(navScreens.transactionDetail, transaction);
+                }}
+                underlayColor={highlight}
+            >
+                <>
                 {flatContents}
 
                 <View style={styles.flatContainer}>
@@ -47,7 +59,8 @@ export default function TransactionListItem({ transaction, flatDisplay = false }
                         {date}
                     </Text>
                 </View>
-            </View>
+                </>
+            </TouchableHighlight>
         );
     }
 }

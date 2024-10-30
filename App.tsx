@@ -1,7 +1,7 @@
 /*
  *  Author: Kaleb Jubar
  *  Created: 26 Oct 1985, 4:15:00 AM
- *  Last update: 29 Oct 2024, 8:25:01 PM
+ *  Last update: 30 Oct 2024, 11:21:55 AM
  *  Copyright (c) 1985 - 2024 Kaleb Jubar
  */
 import { StyleSheet, View } from 'react-native';
@@ -17,13 +17,14 @@ import balanceHistory from "./src/data/mock/balanceHistory.json";
 
 import HomeScreen from './src/screens/HomeScreen';
 
-import { primaryColor, secondaryColor } from './src/util/constants';
+import { primaryColor, secondaryColor, white } from './src/util/constants';
 
 const BankTheme = {
     ...DefaultTheme,
     colors: {
         ...DefaultTheme.colors,
         primary: secondaryColor,
+        background: white,
     },
 };
 

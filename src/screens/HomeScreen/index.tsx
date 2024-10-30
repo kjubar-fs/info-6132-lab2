@@ -1,7 +1,7 @@
 /*
  *  Author: Kaleb Jubar
  *  Created: 28 Oct 2024, 3:45:16 PM
- *  Last update: 29 Oct 2024, 4:02:02 PM
+ *  Last update: 30 Oct 2024, 11:23:58 AM
  *  Copyright (c) 2024 Kaleb Jubar
  */
 import { View } from "react-native";
@@ -30,7 +30,6 @@ export default function HomeScreen() {
                     tabBarInactiveTintColor: secondaryColor,
                     tabBarActiveTintColor: accentColor,
                 }}
-                sceneContainerStyle={styles.navContainer}
             >
                 <Tab.Screen
                     name={navScreens.summary}

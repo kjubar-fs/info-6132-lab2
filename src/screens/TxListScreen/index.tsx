@@ -1,7 +1,7 @@
 /*
  *  Author: Kaleb Jubar
  *  Created: 28 Oct 2024, 3:50:14 PM
- *  Last update: 29 Oct 2024, 8:23:48 PM
+ *  Last update: 30 Oct 2024, 11:20:19 AM
  *  Copyright (c) 2024 Kaleb Jubar
  */
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -9,7 +9,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import TxListHomeScreen from "../TxListHomeScreen";
 import TxDetailScreen from "../TxDetailScreen";
 
-import { navScreens, secondaryColor } from "../../util/constants";
+import { navScreens } from "../../util/constants";
 
 const Stack = createNativeStackNavigator();
 

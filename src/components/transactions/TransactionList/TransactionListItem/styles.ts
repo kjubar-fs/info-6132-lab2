@@ -1,12 +1,10 @@
 /*
  *  Author: Kaleb Jubar
  *  Created: 29 Oct 2024, 2:26:57 PM
- *  Last update: 29 Oct 2024, 8:15:28 PM
+ *  Last update: 30 Oct 2024, 12:04:43 PM
  *  Copyright (c) 2024 Kaleb Jubar
  */
 import { StyleSheet } from "react-native";
-
-import { negativeColor, positiveColor } from "../../../../util/constants";
 
 export default StyleSheet.create({
     container: {
@@ -49,13 +47,5 @@ export default StyleSheet.create({
     date: {
         fontSize: 13,
         fontWeight: "300",
-    },
-
-    positive: {
-        color: positiveColor,
-    },
-
-    negative: {
-        color: negativeColor,
     },
 });

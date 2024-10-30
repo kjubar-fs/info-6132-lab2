@@ -1,7 +1,7 @@
 /*
  *  Author: Kaleb Jubar
  *  Created: 29 Oct 2024, 1:49:51 PM
- *  Last update: 29 Oct 2024, 8:16:08 PM
+ *  Last update: 30 Oct 2024, 12:04:15 PM
  *  Copyright (c) 2024 Kaleb Jubar
  */
 import { View, Text, TouchableHighlight } from "react-native";
@@ -13,7 +13,7 @@ import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 
 import { Transaction } from "../../../../data/context/transactions";
 
-import { formatDate, highlight, navScreens, numFormatter } from "../../../../util/constants";
+import { formatDate, highlight, navScreens, negativeColor, numFormatter, positiveColor } from "../../../../util/constants";
 import styles from "./styles";
 
 interface TransactionListItemProps {
@@ -29,7 +29,7 @@ export default function TransactionListItem({ transaction, flatDisplay = false }
             <Text style={styles.name}>{transaction.name}</Text>
 
             <Text
-                style={transaction.value > 0 ? styles.positive : styles.negative}
+                style={{ color: transaction.value > 0 ? positiveColor : negativeColor }}
             >{numFormatter.format(transaction.value)}</Text>
         </View>
     );

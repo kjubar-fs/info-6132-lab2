@@ -1,12 +1,10 @@
 /*
  *  Author: Kaleb Jubar
  *  Created: 29 Oct 2024, 10:46:24 AM
- *  Last update: 29 Oct 2024, 2:29:35 PM
+ *  Last update: 30 Oct 2024, 12:03:08 PM
  *  Copyright (c) 2024 Kaleb Jubar
  */
 import { StyleSheet } from "react-native";
-
-import { negativeColor, positiveColor } from "../../../util/constants";
 
 export default StyleSheet.create({
     container: {
@@ -28,13 +26,5 @@ export default StyleSheet.create({
     dayChangeHeader: {
         fontWeight: "500",
         color: "#666",
-    },
-
-    positive: {
-        color: positiveColor,
-    },
-
-    negative: {
-        color: negativeColor,
     },
 });

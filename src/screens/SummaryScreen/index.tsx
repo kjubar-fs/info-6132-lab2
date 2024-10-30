@@ -1,7 +1,7 @@
 /*
  *  Author: Kaleb Jubar
  *  Created: 28 Oct 2024, 3:50:02 PM
- *  Last update: 29 Oct 2024, 7:55:02 PM
+ *  Last update: 29 Oct 2024, 7:58:44 PM
  *  Copyright (c) 2024 Kaleb Jubar
  */
 import { Text, ScrollView, TouchableHighlight } from "react-native";
@@ -38,7 +38,7 @@ export default function SummaryScreen() {
                     underlayColor={highlight}
                     onPress={() => { nav?.navigate(navScreens.transactionsTab) }}
                 >
-                    <Text>View More</Text>
+                    <Text style={styles.buttonText}>View More</Text>
                 </TouchableHighlight>
             </Card>
         </ScrollView>

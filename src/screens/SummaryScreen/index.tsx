@@ -1,7 +1,7 @@
 /*
  *  Author: Kaleb Jubar
  *  Created: 28 Oct 2024, 3:50:02 PM
- *  Last update: 29 Oct 2024, 7:58:44 PM
+ *  Last update: 30 Oct 2024, 12:34:06 PM
  *  Copyright (c) 2024 Kaleb Jubar
  */
 import { Text, ScrollView, TouchableHighlight } from "react-native";
@@ -25,7 +25,7 @@ export default function SummaryScreen() {
         <ScrollView contentContainerStyle={styles.container}>
             <Card shadowType="light">
                 <Text style={styles.title}>Current Balance</Text>
-                <BalanceListing balance={50000} dayChange={10} />
+                <BalanceListing />
                 <Divider />
                 <BalanceHistory />
             </Card>

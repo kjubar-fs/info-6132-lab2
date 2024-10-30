@@ -1,7 +1,7 @@
 /*
  *  Author: Kaleb Jubar
  *  Created: 29 Oct 2024, 2:26:57 PM
- *  Last update: 29 Oct 2024, 7:57:13 PM
+ *  Last update: 29 Oct 2024, 8:15:28 PM
  *  Copyright (c) 2024 Kaleb Jubar
  */
 import { StyleSheet } from "react-native";
@@ -19,6 +19,20 @@ export default StyleSheet.create({
     flatContainer: {
         flexDirection: "row",
         justifyContent: "space-between",
+    },
+
+    contentContainer: {
+        flexDirection: "row",
+        alignItems: "center",
+    },
+
+    rowContainer: {
+        flexGrow: 1,
+    },
+
+    disclosure: {
+        padding: 5,
+        paddingLeft: 10,
     },
 
     name: {

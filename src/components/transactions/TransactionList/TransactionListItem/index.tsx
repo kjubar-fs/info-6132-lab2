@@ -1,13 +1,15 @@
 /*
  *  Author: Kaleb Jubar
  *  Created: 29 Oct 2024, 1:49:51 PM
- *  Last update: 29 Oct 2024, 7:56:03 PM
+ *  Last update: 29 Oct 2024, 8:16:08 PM
  *  Copyright (c) 2024 Kaleb Jubar
  */
 import { View, Text, TouchableHighlight } from "react-native";
 
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 
 import { Transaction } from "../../../../data/context/transactions";
 
@@ -45,21 +47,31 @@ export default function TransactionListItem({ transaction, flatDisplay = false }
                 }}
                 underlayColor={highlight}
             >
-                <>
-                {flatContents}
+                <View style={styles.contentContainer}>
+                    <View style={styles.rowContainer}>
+                        {flatContents}
 
-                <View style={styles.flatContainer}>
-                    <Text style={styles.source}>
-                        {transaction.value > 0 ?
-                            transaction.sender :
-                            transaction.destination}
-                    </Text>
-                    
-                    <Text style={styles.date}>
-                        {date}
-                    </Text>
+                        <View style={styles.flatContainer}>
+                            <Text style={styles.source}>
+                                {transaction.value > 0 ?
+                                    transaction.sender :
+                                    transaction.destination}
+                            </Text>
+                            
+                            <Text style={styles.date}>
+                                {date}
+                            </Text>
+                        </View>
+                    </View>
+
+                    <View style={styles.disclosure}>
+                        <MaterialIcons
+                            name="arrow-forward-ios"
+                            size={10}
+                            color="#888"
+                        />
+                    </View>
                 </View>
-                </>
             </TouchableHighlight>
         );
     }
